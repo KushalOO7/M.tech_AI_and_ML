@@ -1,0 +1,51 @@
+
+- Precisely, the above given graph say about Big theta Asymptotic notation notation.
+
+- because from it we can clearly  state that the function f(n) is firmly bounded by the function g(n). 
+
+Big- Theta Notation :
+
+- The Big Theta can be read as the “exact order of f(n)”
+
+- This function gives an upper and a lower bound, a much tighter bound for the behavior of functions and algorithms.
+
+- Definition: f(n) = Θ(g(n)) ( can say "f(n) is Big-Theta of g(n)" )
+
+- iff there are three positive constants c1, c2 and n0 such that   [ c1|g(n)| ≤ |f(n)| ≤ c2|g(n)| , for all n ≥ n0 ]   ----- {1}
+                                                                  OR
+                                 [ iff f(n) = O(g(n))  and  f(n) = Big-omega(g(n)) ]                                              ----- {2}
+
+- If f(n) is nonnegative, we can simplify the condition - {1} as
+[ 0 ≤ c1 g(n) ≤ f(n) ≤ c2 g(n) , for all n ≥ n0 ]
+
+- Growth rate of f(n) and g(n) are same as value of n increases. In other words, g(n) is an asymptotically tight bound on f(n)
+
+i.e ;   if f(n) = Θ(g(n)) then f ~ g  or  lim n->infinite   f(n)/g(n) = c  where , 0<c<infinite
+
+- Unlike the other bounds, a Θ-bound is accurate. So, if an algorithm is Θ(logn), then it runs in logarithmic time itself.
+
+Example : n^3 + 5n + 8 = Θ(n^3) 
+
+
+- Basically , Big-O notation is the language to estimate the upper bound 
+of any algorithm or can say to measure space or  time complexity of the worst case of  an algorithm
+
+- Big-O notation is a way to track how quickly the 
+runtime grows relative to the size of the input.
+
+- The significance of this Big O notation measure is used in
+ attempting to choose whether an algorithm is adequate 
+or the algorithm will consistently be too delayed on a large enough inputs.
+
+- Any proportion of execution should implicitly or
+ explicitly refer to some computation model
+commonly this big o is some idea of limiting factor.
+
+-For one issue or take an example of CPU, the quantity of allocating 
+memory (implicitly depend on utilization rate of CPU)
+ might be the limiting factor, while for another, it could be 
+the quantity of messages passed across a network.
+
+- Having a good understanding of Big-O notation gives 
+us a more well-rounded context about 
+what does and does not matter when we design algorithms
