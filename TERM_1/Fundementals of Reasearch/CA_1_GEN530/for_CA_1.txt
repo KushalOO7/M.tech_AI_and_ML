@@ -1,0 +1,51 @@
+Introduction : (combined Convolution Neural Network and Long short-term memory Network for detecting covid-19)
+
+- The Covid pandemic that has spread across the world has set all areas on lockdown.
+- Finding the covid at starting stage plays an important role to control it before it is highly infectious.
+- Numerous analysts have exhibited different ways to deal with identifying Coronavirus using X-ray pictures.
+- These days, automatic disease detection has turned into a vital issue in medical science because of fast population development.
+- So, Eventually a deep learning based system that combines the CNN and LSTM networks is proposed to automatically detect COVID-19 from X-ray images.
+- A dataset is formed comprising 4575 images for developing a model to detect covid-19.
+- The LSTM network has an inward memory that is prepared to do learning from basic encounters with long-term states.
+
+
+Main : (about CNN, LSTM and CNN+LSTM ||| compare with other Networks)
+(CNN)
+- The fundamental thought behind a CNN is that it can get obtain local features from high layer information sources and move them to lower layers for more complex features.
+-  A CNN is a series of convolutional and pooling layers before a fully connected layer.
+- The convolutional layer includes a set of kernels for deciding a tensor of feature maps.
+- To increase nonlinearity in feature maps, the rectified linear unit (ReLU) layer is utilized.
+- ReLU is basically an activation function used to keep the threshold input at zero.
+- pooling layer is arranged next to convolution layer used to reduce the size of the input by removing unecessary information to complete the task faster.
+- Max pooling is the most common method, which produces the maximum value in an input region.
+- FC layer is the final layer which is used to classify the input data into varous categories.
+
+(LSTM)
+- Long short-term memory is an improvement of recurrent neural networks
+- LSTM proposes memory blocks rather than conventional RNN units in addressing the vanishing and exploding gradient issue
+- An LSTM network can recall and connect past data to the data obtained in the present.
+- An LSTM is formed with three gates such as a input gate, a 'forget' gate and an output gate
+- The forget gate allows the selective passage of data using a sigmoid layer and a dot product
+- The output gate determines the states that are required for continuation by the corresponding inputs.
+- The final output is obtained and multiplied by the state decision vectors that pass new information through the tanh layer.
+
+(Combined)
+- CNN is used for feature extraction and LSTM is utilized to classify COVID-19 dependent on those features.
+- This hybrid network (CNN-LSTM) has 20 layers: 12 convolutional layers, five pooling layers, one FC layer, one LSTM layer, and one output layer with the softmax function.
+- Every convolution block is joined with a few 2D CNNs and one pooling layer, trailed by a dropout layer described by a 25% dropout rate.
+- In the last piece of the design, the function map is moved to the LSTM layer to extract time information.
+
+(Experimental Result for combined)
+accuracy_score = 99.2%
+Specificity = 99.2%
+Sensitivity = 99.3%
+F1_score = 98.9%
+
+Conclusion :
+- By analyzing the outcomes, it is exhibited that a blend of CNN and LSTM has significant effects on the detection of COVID-19 based on the automatic extraction of features from X-ray images.
+- Broad test results uncovered that the proposed design outperforms a competitive CNN Network.
+- This architecture has some limitations , the sample size is moderately little that should be expanded to test the generalizability of the created framework
+- This would be overcomed if more pictures are found in the coming days
+- it just spotlights on the posterior anterior (PA) perspective on X-rays, thus it can't separate different perspectives of X-rays
+- Coronavirus pictures including various illness side effects can't be productively classified.
+- if this system is compared with radiologists then this prorposed system would have developed more in the future.
